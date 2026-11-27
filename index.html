@@ -1,15 +1,377 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Pertamaku</title>
+    <title>CV. AR'S MEKAR (ARSM) — Solusi Manajemen & Sistem Parkir Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        arsm: {
+                            green: '#3B6E22',
+                            dark: '#1F3D11',
+                            light: '#F3F8F0',
+                            yellow: '#FFF200',
+                            gold: '#E5D800'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        .hero-pattern {
+            background-color: #1F3D11;
+            background-image: radial-gradient(#3B6E22 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glow-yellow {
+            box-shadow: 0 0 25px rgba(255, 242, 0, 0.35);
+        }
     </style>
 </head>
-<body>
-    <h1>Halo! Website ini online lewat GitHub Pages</h1>
-    <p>Dibuat dan di-deploy menggunakan Git.</p>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-arsm-yellow selection:text-arsm-dark">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-arsm-dark/95 backdrop-blur-md border-b border-arsm-green/40 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-white p-1.5 rounded-full shadow-md group-hover:scale-105 transition">
+                    <img src="logo-arsm.jpeg" alt="Logo CV. AR'S MEKAR" class="w-11 h-11 object-contain rounded-full">
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-arsm-yellow block leading-none">CV. AR'S MEKAR</span>
+                    <span class="text-xs text-green-200 tracking-widest uppercase">Smart Parking Management</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                <a href="#tentang" class="hover:text-arsm-yellow transition">Tentang & Keunggulan</a>
+                <a href="#sistem" class="hover:text-arsm-yellow transition">Sistem Manless & Perangkat</a>
+                <a href="#simulasi" class="hover:text-arsm-yellow transition">Simulasi Kemitraan</a>
+                <a href="#struktur" class="hover:text-arsm-yellow transition">Struktur</a>
+                <a href="https://katalog.inaproc.id/ars-mekar/area-parkir-per-tahun" target="_blank" class="bg-arsm-yellow text-arsm-dark px-4 py-2.5 rounded-xl font-bold hover:bg-arsm-gold transition shadow-md">
+                    E-Katalog Inaproc ↗
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-pattern text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-arsm-green/50 border border-arsm-yellow/40 px-4 py-1.5 rounded-full text-xs font-bold text-arsm-yellow uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-arsm-yellow animate-ping"></span>
+                    Terdaftar Resmi di E-Katalog Pemerintah (Inaproc)
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                    Kelola Lahan Parkir Lebih <span class="text-arsm-yellow underline decoration-arsm-green underline-offset-8">Aman, Transparan,</span> & Menguntungkan.
+                </h1>
+                <p class="text-green-100 text-lg leading-relaxed max-w-2xl">
+                    <strong>CV. AR'S MEKAR</strong> menghadirkan solusi manajemen jasa parkir modern berbasis sistem <em>Manless</em> dan <em>MLC Barrier Gate</em>. Pemilik lahan <strong>0% modal awal</strong> dengan bagi hasil transparan setiap bulan.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#simulasi" class="bg-arsm-yellow text-arsm-dark px-7 py-4 rounded-xl font-extrabold text-base hover:bg-arsm-gold transition glow-yellow">
+                        Hitung Potensi Bagi Hasil
+                    </a>
+                    <a href="https://wa.me/6281243766197?text=Halo%20CV.%20AR'S%20MEKAR,%20saya%20tertarik%20kerja%20sama%20pengelolaan%20lahan%20parkir." target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/30 px-7 py-4 rounded-xl font-bold text-base transition">
+                        Hubungi via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- HERO VISUAL CARD -->
+            <div class="lg:col-span-5">
+                <div class="bg-white text-slate-800 rounded-3xl p-8 shadow-2xl border-4 border-arsm-yellow relative">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-5 mb-6">
+                        <img src="logo-arsm.jpeg" alt="Logo ARSM" class="w-20 h-20 object-contain">
+                        <div class="text-right">
+                            <span class="bg-arsm-light text-arsm-green text-xs font-extrabold px-3 py-1 rounded-full">OPERASIONAL AKTIF</span>
+                            <p class="text-3xl font-extrabold text-arsm-dark mt-1">21 SDM</p>
+                            <p class="text-xs text-slate-500">Profesional & Terlatih</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-arsm-light p-4 rounded-2xl flex items-center justify-between border border-arsm-green/20">
+                            <div>
+                                <p class="text-xs font-bold text-arsm-green uppercase">Lokasi Aktif 01</p>
+                                <p class="font-bold text-slate-900">Area Parkir Pasar Tramo Maros</p>
+                            </div>
+                            <span class="bg-arsm-green text-white font-extrabold px-3 py-1.5 rounded-xl text-sm">12 Personel</span>
+                        </div>
+                        <div class="bg-arsm-light p-4 rounded-2xl flex items-center justify-between border border-arsm-green/20">
+                            <div>
+                                <p class="text-xs font-bold text-arsm-green uppercase">Lokasi Aktif 02</p>
+                                <p class="font-bold text-slate-900">Area Parkir RS Faisal</p>
+                            </div>
+                            <span class="bg-arsm-green text-white font-extrabold px-3 py-1.5 rounded-xl text-sm">9 Personel</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                        <span>Kantor Pusat: Turikale, Maros</span>
+                        <span class="font-bold text-arsm-green">● Sistem MLC Gate Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KEUNGGULAN MITRA (BENTO GRID) -->
+    <section id="tentang" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-arsm-green font-extrabold text-sm uppercase tracking-widest">Keuntungan Pemilik Lahan</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Mengapa Bermitra dengan CV. AR'S MEKAR?</h2>
+            <p class="text-slate-600 mt-3">Kami mengambil alih seluruh investasi perangkat, perawatan sistem, hingga manajemen lapangan agar pemilik lahan fokus menerima pendapatan bersih.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-arsm-dark text-white p-8 rounded-3xl shadow-lg border-b-8 border-arsm-yellow">
+                <div class="w-12 h-12 rounded-2xl bg-arsm-yellow text-arsm-dark font-extrabold text-xl flex items-center justify-center mb-6">01</div>
+                <h3 class="text-xl font-bold text-arsm-yellow mb-3">Tanpa Modal Awal (Rp 0)</h3>
+                <p class="text-green-100 text-sm leading-relaxed">Pemilik lahan tidak perlu mengeluarkan biaya pengadaan palang otomatis, komputer kasir, maupun instalasi sistem parkir.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-200 border-b-8 border-arsm-green">
+                <div class="w-12 h-12 rounded-2xl bg-arsm-light text-arsm-green font-extrabold text-xl flex items-center justify-center mb-6">02</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Bagi Hasil Bulanan Transparan</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Pemilik lahan memperoleh keuntungan rutin setiap bulan sesuai kesepakatan kontrak, didukung pencatatan digital otomatis di komputer server/admin.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-200 border-b-8 border-arsm-green">
+                <div class="w-12 h-12 rounded-2xl bg-arsm-light text-arsm-green font-extrabold text-xl flex items-center justify-center mb-6">03</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">SDM Berkualitas & Siaga</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Didukung tim operasional lapangan, keamanan, kasir, serta teknisi <em>maintenance</em> internal untuk menjamin kenyamanan pengunjung setiap hari.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEM MANLESS & PERANGKAT INTERAKTIF -->
+    <section id="sistem" class="py-20 bg-arsm-light border-y border-arsm-green/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="bg-arsm-green text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Teknologi & Infrastruktur</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Penerapan Sistem Manless & MLC Barrier Gate</h2>
+                    <p class="text-slate-600 leading-relaxed">Seluruh transaksi kendaraan tercatat secara sistematis untuk mencegah kebocoran pendapatan dan mempercepat antrean keluar-masuk area parkir.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-arsm-green/20">
+                            <h4 class="font-bold text-arsm-dark">1. MLC Barrier Gate</h4>
+                            <p class="text-xs text-slate-600 mt-1">Palang gate otomatis responsif untuk kontrol akses masuk dan keluar kendaraan.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-arsm-green/20">
+                            <h4 class="font-bold text-arsm-dark">2. Free / Drop-Off &lt; 5 Menit</h4>
+                            <p class="text-xs text-slate-600 mt-1">Sistem otomatis membebaskan biaya parkir untuk kendaraan antar-jemput di bawah 5 menit.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-arsm-green/20">
+                            <h4 class="font-bold text-arsm-dark">3. Tarif Paket Kendaraan</h4>
+                            <p class="text-xs text-slate-600 mt-1">Dukungan penginputan tarif paket/berlangganan dengan tampilan status langsung di layar kasir.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-arsm-green/20">
+                            <h4 class="font-bold text-arsm-dark">4. Karcis & Struk Penagihan</h4>
+                            <p class="text-xs text-slate-600 mt-1">Printer karcis pos masuk-keluar terintegrasi komputer kasir dan komputer server/admin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIMULASI LAYAR KASIR MANLESS (FITUR UNIK) -->
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-arsm-green">
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-6">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-arsm-yellow"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                <span class="text-xs font-mono text-slate-400 ml-2">ARSM-POS-TERMINAL v2.6</span>
+                            </div>
+                            <span class="text-xs bg-arsm-green px-2.5 py-1 rounded font-bold text-arsm-yellow">LIVE SIMULATOR</span>
+                        </div>
+
+                        <p class="text-xs text-slate-400 mb-3">Klik mode transaksi di bawah untuk melihat simulasi layar kasir ARSM:</p>
+                        <div class="grid grid-cols-3 gap-2 mb-6">
+                            <button onclick="setPosMode('dropoff')" class="pos-btn bg-arsm-yellow text-arsm-dark font-bold py-2 px-3 rounded-xl text-xs transition">Drop Off &lt;5 Mnt</button>
+                            <button onclick="setPosMode('reguler')" class="pos-btn bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-3 rounded-xl text-xs transition">Tarif Reguler</button>
+                            <button onclick="setPosMode('paket')" class="pos-btn bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-3 rounded-xl text-xs transition">Member / Paket</button>
+                        </div>
+
+                        <div id="pos-screen" class="bg-slate-950 border border-slate-800 rounded-2xl p-5 font-mono text-sm space-y-3">
+                            <div class="flex justify-between text-xs text-slate-400">
+                                <span>POS KELUAR 01 • MLC GATE</span>
+                                <span id="pos-status" class="text-arsm-yellow font-bold">STATUS: FREE DROP-OFF</span>
+                            </div>
+                            <div class="border-y border-slate-800 py-3 space-y-1">
+                                <p>No. Karcis : <span class="text-white">ARSM-202611-084</span></p>
+                                <p>Durasi     : <span id="pos-durasi" class="text-green-400">00 Jam 03 Menit 42 Detik</span></p>
+                                <p>Kategori   : <span id="pos-kategori" class="text-white">Antar / Jemput (&lt; 5 Menit)</span></p>
+                            </div>
+                            <div class="flex items-center justify-between pt-1">
+                                <span class="text-slate-400">TOTAL TAGIHAN:</span>
+                                <span id="pos-total" class="text-2xl font-extrabold text-arsm-yellow">Rp 0 (GRATIS)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KALKULATOR SIMULASI KEMITRAAN -->
+    <section id="simulasi" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-arsm-dark text-white rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-arsm-yellow">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-arsm-yellow font-bold text-xs uppercase tracking-widest">Estimasi Pendapatan Lahan</span>
+                <h2 class="text-3xl font-extrabold mt-1">Simulasi Potensi Omzet Parkir Bulanan</h2>
+                <p class="text-green-200 text-sm mt-2">Geser perkiraan rata-rata kendaraan harian di lokasi Anda untuk melihat gambaran potensi pendapatan kotor sebelum pembagian hasil yang disepakati.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6 bg-arsm-green/30 p-6 rounded-2xl border border-arsm-green">
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-2">
+                            <span>Rata-rata Motor / Hari</span>
+                            <span id="val-motor" class="text-arsm-yellow">150 Motor</span>
+                        </div>
+                        <input type="range" id="range-motor" min="20" max="1000" step="10" value="150" oninput="hitungSimulasi()" class="w-full accent-arsm-yellow cursor-pointer">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-2">
+                            <span>Rata-rata Mobil / Hari</span>
+                            <span id="val-mobil" class="text-arsm-yellow">50 Mobil</span>
+                        </div>
+                        <input type="range" id="range-mobil" min="5" max="500" step="5" value="50" oninput="hitungSimulasi()" class="w-full accent-arsm-yellow cursor-pointer">
+                    </div>
+                    <p class="text-xs text-green-200">*Asumsi ilustrasi tarif standar (Motor Rp 2.000, Mobil Rp 5.000) × 30 hari. Persentase bagi hasil ditentukan melalui kesepakatan resmi kedua belah pihak.</p>
+                </div>
+
+                <div class="bg-white text-slate-900 p-7 rounded-2xl text-center space-y-3">
+                    <p class="text-xs font-extrabold uppercase tracking-wider text-arsm-green">Estimasi Omzet Kotor / Bulan</p>
+                    <p id="hasil-omzet" class="text-3xl sm:text-4xl font-extrabold text-arsm-dark">Rp 16.500.000</p>
+                    <p class="text-xs text-slate-500">Modal Perangkat & Sistem oleh Pemilik Lahan: <strong class="text-arsm-green">Rp 0</strong></p>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6281243766197?text=Halo%20CV.%20AR'S%20MEKAR,%20saya%20ingin%20konsultasi%20bagi%20hasil%20pengelolaan%20lahan%20parkir." target="_blank" class="inline-block w-full bg-arsm-green hover:bg-arsm-dark text-white font-bold py-3.5 px-6 rounded-xl transition">
+                            Ajukan Survei Lahan Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRUKTUR PERUSAHAAN -->
+    <section id="struktur" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-arsm-green font-extrabold text-sm uppercase tracking-widest">Manajemen & Tim</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Struktur Perusahaan CV. AR'S MEKAR</h2>
+            </div>
+
+            <!-- DIREKTUR -->
+            <div class="max-w-sm mx-auto bg-arsm-dark text-white p-6 rounded-3xl text-center shadow-xl border-4 border-arsm-yellow mb-8">
+                <span class="bg-arsm-yellow text-arsm-dark text-xs font-extrabold px-3 py-1 rounded-full uppercase">Direktur</span>
+                <h3 class="text-2xl font-extrabold mt-3">Ismail</h3>
+                <p class="text-xs text-green-200 mt-1">Pimpinan Utama CV. AR'S MEKAR</p>
+            </div>
+
+            <!-- JAJARAN MANAJEMEN -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Humas</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Hj. Masriani, S.Kep., Ns</h4>
+                </div>
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Bendahara</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Bina B</h4>
+                </div>
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Penasehat</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Andi Ahmad Masdjono</h4>
+                </div>
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Koordinator Lapangan</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Parkas</h4>
+                </div>
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Keamanan</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Idial Wahid</h4>
+                </div>
+                <div class="bg-arsm-light p-5 rounded-2xl border border-arsm-green/20">
+                    <span class="text-xs font-extrabold text-arsm-green uppercase">Maintenance & Operasional</span>
+                    <h4 class="font-bold text-slate-900 text-lg mt-1">Amar Alhapid & Anggota Parkir</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & KONTAK RESMI -->
+    <footer class="bg-arsm-dark text-white pt-16 pb-10 border-t-4 border-arsm-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10 pb-12 border-b border-arsm-green/40">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="logo-arsm.jpeg" alt="Logo ARSM" class="w-12 h-12 rounded-full bg-white p-1">
+                    <div>
+                        <h3 class="font-extrabold text-lg text-arsm-yellow">CV. AR'S MEKAR</h3>
+                        <p class="text-xs text-green-200">Jasa Pengelolaan & Sistem Parkir</p>
+                    </div>
+                </div>
+                <p class="text-sm text-green-100 leading-relaxed">Memberikan nilai tambah dalam pengelolaan keamanan, ketertiban, dan kenyamanan area parkir Anda.</p>
+            </div>
+
+            <div class="space-y-3 text-sm">
+                <h4 class="font-bold text-arsm-yellow uppercase tracking-wider">Kantor & Kontak Resmi</h4>
+                <p class="text-green-100"><strong>Alamat:</strong> Jl. Langsat No. 13, Kel. Turikale, Kec. Turikale, Kab. Maros</p>
+                <p class="text-green-100"><strong>Telepon / WA:</strong> <a href="https://wa.me/6281243766197" class="underline hover:text-arsm-yellow">0812-4376-6197</a></p>
+                <p class="text-green-100"><strong>Email:</strong> <a href="mailto:cv.arsmekar@gmail.com" class="underline hover:text-arsm-yellow">cv.arsmekar@gmail.com</a></p>
+            </div>
+
+            <div class="space-y-3 text-sm">
+                <h4 class="font-bold text-arsm-yellow uppercase tracking-wider">Pengadaan & Katalog</h4>
+                <p class="text-green-100">Layanan pengelolaan area parkir per tahun tersedia resmi di E-Katalog Inaproc:</p>
+                <a href="https://katalog.inaproc.id/ars-mekar/area-parkir-per-tahun" target="_blank" class="inline-block bg-arsm-yellow text-arsm-dark font-extrabold px-5 py-3 rounded-xl hover:bg-arsm-gold transition">
+                    Buka E-Katalog Inaproc ↗
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center text-xs text-green-300">
+            &copy; 2026 CV. AR'S MEKAR (ARSM). Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script>
+        function setPosMode(mode) {
+            const status = document.getElementById('pos-status');
+            const durasi = document.getElementById('pos-durasi');
+            const kategori = document.getElementById('pos-kategori');
+            const total = document.getElementById('pos-total');
+
+            if (mode === 'dropoff') {
+                status.textContent = 'STATUS: FREE DROP-OFF';
+                durasi.textContent = '00 Jam 03 Menit 42 Detik';
+                kategori.textContent = 'Antar / Jemput (< 5 Menit)';
+                total.textContent = 'Rp 0 (GRATIS)';
+            } else if (mode === 'reguler') {
+                status.textContent = 'STATUS: TRANSAKSI REGULER';
+                durasi.textContent = '01 Jam 25 Menit 10 Detik';
+                kategori.textContent = 'Kendaraan Roda 4 (Mobil)';
+                total.textContent = 'Rp 5.000 (STRUK TERCETAK)';
+            } else {
+                status.textContent = 'STATUS: PAKET TERDAFTAR';
+                durasi.textContent = 'Berlaku s/d 30 Hari';
+                kategori.textContent = 'Paket Bulanan / Berlangganan';
+                total.textContent = 'PAKET AKTIF (PALANG TERBUKA)';
+            }
+        }
+
+        function hitungSimulasi() {
+            const motor = parseInt(document.getElementById('range-motor').value);
+            const mobil = parseInt(document.getElementById('range-mobil').value);
+            document.getElementById('val-motor').textContent = motor + ' Motor';
+            document.getElementById('val-mobil').textContent = mobil + ' Mobil';
+            const totalBulanan = ((motor * 2000) + (mobil * 5000)) * 30;
+            document.getElementById('hasil-omzet').textContent = 'Rp ' + totalBulanan.toLocaleString('id-ID');
+        }
+    </script>
 </body>
 </html>
